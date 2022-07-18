@@ -1,4 +1,4 @@
-package ejemplo;
+package poligono;
 
 import static org.junit.Assert.assertTrue;
 
