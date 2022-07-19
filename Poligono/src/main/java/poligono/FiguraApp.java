@@ -9,6 +9,7 @@ public class FiguraApp {
         int elementos;  // numero de puntos del poligono
         Double X, Y; // coordenadas de los puntos
         Double radio; // radio de la circunferencia
+        Double radioHorizontal, radioVertical;
 
         System.out.print("\nIngrese la cantidad de puntos del poligono: ");
         elementos = entrada.nextInt(); // ingreso un entero: variable = entrada.nextInt()
@@ -41,8 +42,15 @@ public class FiguraApp {
         System.out.print("Ingrese el radio de la circunferencia: ");
         radio = entrada.nextDouble();
 
+        // ingreso los radios de la Elipse
+        System.out.print("Ingrese el radio horizontal de la elipse: ");
+        radioHorizontal = entrada.nextDouble();
+        System.out.print("Ingrese el radio vertical de la elipse: ");
+        radioVertical = entrada.nextDouble();
+
         System.out.println("El area del poligono es: " + poligono.areaPoligono(poligono,elementos));
         System.out.println("El area de la circunferencia es: " + poligono.areaPoligono(radio));
+        System.out.println("El area de la elipse es: " + poligono.areaPoligono(radioHorizontal,radioVertical));
 
     }
 

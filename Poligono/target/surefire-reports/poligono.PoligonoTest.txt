@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: poligono.PoligonoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! - in poligono.PoligonoTest
+test_area_circunferencia_no_pasa(poligono.PoligonoTest)  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <9.42477796076938> but was: <12.566370614359172>
+	at poligono.PoligonoTest.test_area_circunferencia_no_pasa(PoligonoTest.java:35)
+
+test_area_poigono_no_pasa(poligono.PoligonoTest)  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1.0> but was: <0.5>
+	at poligono.PoligonoTest.test_area_poigono_no_pasa(PoligonoTest.java:79)
+

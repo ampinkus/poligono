@@ -79,4 +79,37 @@ public class PoligonoTest {
         assertEquals(1, area,0.1); // El area es 0.5 pero sugiero que es 1 , el test no pasa
     }
 
+    @Test
+    public void test_area_elipse_pasa(){
+        // given: Donde ponemos los datos
+        Double radioHorizontal = 2D;
+        Double radioVertical = 1D;
+        Double area;
+        Poligono elipse = new Poligono(1);
+
+
+        //when: Donde ejecutamos el método a probar
+        area = elipse.areaPoligono(radioHorizontal,radioVertical);
+
+        // then: Donde chequeamos el resultado
+        // si el radioHorizontal es 2 y el radioVertical es 1 el area es PI * 2
+        assertEquals(Math.PI * 2, area,0.5);
+    }
+
+    @Test
+    public void test_area_Elipse_no_pasa(){
+        // given: Donde ponemos los datos
+        Double radioHorizontal = 2D;
+        Double radioVertical = 1D;
+        Double area;
+        Poligono elipse = new Poligono(1);
+
+        //when: Donde ejecutamos el método a probar
+        area = elipse.areaPoligono(radioHorizontal,radioVertical);
+
+        // then: Donde chequeamos el resultado
+        // si el radioHorizontal es 2 y el radioVertical es 1 el area es PI * 2
+        assertEquals(Math.PI * 3, area,0.5);
+    }
+
 }

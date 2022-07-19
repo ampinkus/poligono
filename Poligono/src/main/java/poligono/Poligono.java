@@ -90,4 +90,10 @@ public class Poligono extends Figura {
         return Math.PI * radio * radio;
     }
 
+    // Calculamos el area de una elipse como PI * radioHorizontal * radioVertical
+    @Override
+    public Double areaPoligono(Double radioHorizontal, Double radioVertical) {
+        return Math.PI * radioHorizontal * radioVertical;
+    }
+
 }

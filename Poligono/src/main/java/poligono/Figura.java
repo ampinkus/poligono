@@ -10,4 +10,12 @@ public abstract class Figura {
     // Calculamos el area de una circunferencia PI * radio ^2
     // como es un metodo abstracto solo va la firma del mismo. Ver que al ser abtracta el método carece de cuerpo
     public abstract Double areaPoligono(Double radio);
+
+    // Calculamos el area de una elipse como PI * radioHorizontal * radioVertical
+    // como es un metodo abstracto solo va la firma del mismo. Ver que al ser abtracta el método carece de cuerpo
+    public abstract Double areaPoligono(Double radioHorizontal, Double radioVertical);
+
+
+
+
 }
