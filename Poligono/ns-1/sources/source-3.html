@@ -1,0 +1,198 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Poligono</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">poligono</a>
+</div>
+
+<h1>Coverage Summary for Class: Poligono (poligono)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Poligono</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    20%
+  </span>
+  <span class="absValue">
+    (2/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    23.5%
+  </span>
+  <span class="absValue">
+    (4/17)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package poligono;
+<i class="no-highlight">2</i>&nbsp;public class Poligono extends Figura {
+<i class="no-highlight">3</i>&nbsp;
+<i class="no-highlight">4</i>&nbsp;    // atributos
+<i class="no-highlight">5</i>&nbsp;    private int elementos; // número de puntos del poligono
+<i class="no-highlight">6</i>&nbsp;    private  Punto[] poligono; // poligono es el nombre del arreglo de puntos
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;    // constructor
+<b class="fc"><i class="no-highlight">9</i>&nbsp;    public Poligono(int elementos) {</b>
+<b class="fc"><i class="no-highlight">10</i>&nbsp;        this.elementos = elementos;</b>
+<b class="fc"><i class="no-highlight">11</i>&nbsp;        poligono = new Punto[elementos]; // inicializo el arreglo poligono con la cantidad de puntos dada por elementos</b>
+<i class="no-highlight">12</i>&nbsp;    }
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;    // Metodos:
+<i class="no-highlight">15</i>&nbsp;
+<i class="no-highlight">16</i>&nbsp;    // pongo un punto de la clase Punto en el poligono en la posición dada por posicion
+<i class="no-highlight">17</i>&nbsp;    // Uso:  &lt;nombre del poligono&gt;(posicion, punto)
+<i class="no-highlight">18</i>&nbsp;    // posicion es un entero y punto es un objeto de la clase Punto
+<i class="no-highlight">19</i>&nbsp;    public void Insertar(int posicion, Punto punto) {  // pongo un punto de la clase Punto en la posición dada por posicion
+<b class="nc"><i class="no-highlight">20</i>&nbsp;        poligono[posicion] = punto;</b>
+<i class="no-highlight">21</i>&nbsp;    }
+<i class="no-highlight">22</i>&nbsp;
+<i class="no-highlight">23</i>&nbsp;    // guarda la coordenada X del punto que esta en el indice posición del poligono
+<i class="no-highlight">24</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.guardarPuntoX(posicion, x)
+<i class="no-highlight">25</i>&nbsp;    // posicion es entero y x es Double
+<i class="no-highlight">26</i>&nbsp;    public void guardarPuntoX(int posicion, Double x) { // retorna la coordenada X del punto que esta en el indice posición
+<b class="nc"><i class="no-highlight">27</i>&nbsp;        poligono[posicion].setX(x);</b>
+<i class="no-highlight">28</i>&nbsp;    }
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;    // guarda la coordenada Y del punto que esta en el indice posición del poligono
+<i class="no-highlight">31</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.guardarPuntoY(posicion, y)
+<i class="no-highlight">32</i>&nbsp;    // posicion es entero e y  es Double
+<i class="no-highlight">33</i>&nbsp;    public void guardarPuntoY(int posicion, Double y) {
+<b class="nc"><i class="no-highlight">34</i>&nbsp;        poligono[posicion].setY(y);</b>
+<i class="no-highlight">35</i>&nbsp;    }
+<i class="no-highlight">36</i>&nbsp;
+<i class="no-highlight">37</i>&nbsp;    // Muestro el valor de la coordenada X del punto en el indice posicion del polígono
+<i class="no-highlight">38</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.MostrarX(posicion)
+<i class="no-highlight">39</i>&nbsp;    // posicion es un entero
+<i class="no-highlight">40</i>&nbsp;    public void MostrarX(int posicion) {
+<i class="no-highlight">41</i>&nbsp;        // poligono[posicion] me retorna el punto y le aplico getX() al mismo
+<b class="nc"><i class="no-highlight">42</i>&nbsp;        System.out.println(poligono[posicion].getX());</b>
+<i class="no-highlight">43</i>&nbsp;    }
+<i class="no-highlight">44</i>&nbsp;
+<i class="no-highlight">45</i>&nbsp;    // Muestro el valor de la coordenada Y del punto en el indice posicion del polígono
+<i class="no-highlight">46</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.MostrarY(posicion)
+<i class="no-highlight">47</i>&nbsp;    // posicion es un entero
+<i class="no-highlight">48</i>&nbsp;    public void MostrarY(int posicion) {
+<i class="no-highlight">49</i>&nbsp;        // poligono[posicion] me retorna el punto y le aplico getY() al mismo
+<b class="nc"><i class="no-highlight">50</i>&nbsp;        System.out.println(poligono[posicion].getY());</b>
+<i class="no-highlight">51</i>&nbsp;    }
+<i class="no-highlight">52</i>&nbsp;
+<i class="no-highlight">53</i>&nbsp;    // retorna la coordenada X del punto que esta en el indice posición del poligono
+<i class="no-highlight">54</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.retornarPuntoX(posicion)
+<i class="no-highlight">55</i>&nbsp;    // posicion es un entero
+<i class="no-highlight">56</i>&nbsp;    public Double retornarPuntoX(int posicion) { // retorna la coordenada X del punto que esta en el indice posición
+<b class="nc"><i class="no-highlight">57</i>&nbsp;        return poligono[posicion].getX();</b>
+<i class="no-highlight">58</i>&nbsp;    }
+<i class="no-highlight">59</i>&nbsp;
+<i class="no-highlight">60</i>&nbsp;    // retorna la coordenada Y del punto que esta en el indice posición del poligono
+<i class="no-highlight">61</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.retornarPuntoY(posicion)
+<i class="no-highlight">62</i>&nbsp;    // posicion es un entero
+<i class="no-highlight">63</i>&nbsp;    public Double retornarPuntoY(int posicion) {
+<b class="nc"><i class="no-highlight">64</i>&nbsp;        return poligono[posicion].getY();</b>
+<i class="no-highlight">65</i>&nbsp;    }
+<i class="no-highlight">66</i>&nbsp;
+<i class="no-highlight">67</i>&nbsp;
+<i class="no-highlight">68</i>&nbsp;    // Calculamos el valor del area de un poligono utilizando la formula de &quot;lazo de zapato&quot;
+<i class="no-highlight">69</i>&nbsp;    // esta formula me permite calcular el area de cualquier polígono ingresando las coordenadas (X,Y) en sentido horario.
+<i class="no-highlight">70</i>&nbsp;    // Uso:  Los argumentos son el poligono del cual queremos calcular el área y el número de vertices del poligono.
+<i class="no-highlight">71</i>&nbsp;    @Override
+<i class="no-highlight">72</i>&nbsp;    public Double areaPoligono(Poligono poligono, int n)
+<i class="no-highlight">73</i>&nbsp;    {
+<i class="no-highlight">74</i>&nbsp;        // inicializamos el  area
+<b class="nc"><i class="no-highlight">75</i>&nbsp;        Double area = 0D;</b>
+<b class="nc"><i class="no-highlight">76</i>&nbsp;        int j = n - 1;</b>
+<b class="nc"><i class="no-highlight">77</i>&nbsp;        for (int i = 0; i &lt; n; i++) {</b>
+<i class="no-highlight">78</i>&nbsp;            // area += (X[j] + X[i]) * (Y[j] - Y[i]);
+<b class="nc"><i class="no-highlight">79</i>&nbsp;            area += (poligono.retornarPuntoX(j)  + poligono.retornarPuntoX(i)) * (poligono.retornarPuntoY(j) - poligono.retornarPuntoY(i));</b>
+<i class="no-highlight">80</i>&nbsp;            // agregamos el ultimo vertice nuevamente
+<b class="nc"><i class="no-highlight">81</i>&nbsp;            j = i;</b>
+<i class="no-highlight">82</i>&nbsp;        }
+<i class="no-highlight">83</i>&nbsp;        // Retornamos el valor absoluto del área
+<b class="nc"><i class="no-highlight">84</i>&nbsp;        return Math.abs(area / 2.0);</b>
+<i class="no-highlight">85</i>&nbsp;    }
+<i class="no-highlight">86</i>&nbsp;
+<i class="no-highlight">87</i>&nbsp;    // Calculamos el area de una circunferencia PI * radio ^2
+<i class="no-highlight">88</i>&nbsp;    @Override
+<i class="no-highlight">89</i>&nbsp;    public Double areaPoligono(Double radio){
+<b class="fc"><i class="no-highlight">90</i>&nbsp;        return Math.PI * radio * radio;</b>
+<i class="no-highlight">91</i>&nbsp;    }
+<i class="no-highlight">92</i>&nbsp;
+<i class="no-highlight">93</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-07-19 14:16</div>
+</div>
+</body>
+</html>
