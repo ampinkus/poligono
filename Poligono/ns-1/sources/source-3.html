@@ -50,18 +50,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    20%
+    60%
   </span>
   <span class="absValue">
-    (2/10)
+    (6/10)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    23.5%
+    76.5%
   </span>
   <span class="absValue">
-    (4/17)
+    (13/17)
   </span>
 </td>
 </tr>
@@ -92,7 +92,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <i class="no-highlight">17</i>&nbsp;    // Uso:  &lt;nombre del poligono&gt;(posicion, punto)
 <i class="no-highlight">18</i>&nbsp;    // posicion es un entero y punto es un objeto de la clase Punto
 <i class="no-highlight">19</i>&nbsp;    public void Insertar(int posicion, Punto punto) {  // pongo un punto de la clase Punto en la posición dada por posicion
-<b class="nc"><i class="no-highlight">20</i>&nbsp;        poligono[posicion] = punto;</b>
+<b class="fc"><i class="no-highlight">20</i>&nbsp;        poligono[posicion] = punto;</b>
 <i class="no-highlight">21</i>&nbsp;    }
 <i class="no-highlight">22</i>&nbsp;
 <i class="no-highlight">23</i>&nbsp;    // guarda la coordenada X del punto que esta en el indice posición del poligono
@@ -129,14 +129,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 <i class="no-highlight">54</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.retornarPuntoX(posicion)
 <i class="no-highlight">55</i>&nbsp;    // posicion es un entero
 <i class="no-highlight">56</i>&nbsp;    public Double retornarPuntoX(int posicion) { // retorna la coordenada X del punto que esta en el indice posición
-<b class="nc"><i class="no-highlight">57</i>&nbsp;        return poligono[posicion].getX();</b>
+<b class="fc"><i class="no-highlight">57</i>&nbsp;        return poligono[posicion].getX();</b>
 <i class="no-highlight">58</i>&nbsp;    }
 <i class="no-highlight">59</i>&nbsp;
 <i class="no-highlight">60</i>&nbsp;    // retorna la coordenada Y del punto que esta en el indice posición del poligono
 <i class="no-highlight">61</i>&nbsp;    // Uso: &lt;nombre del poligono&gt;.retornarPuntoY(posicion)
 <i class="no-highlight">62</i>&nbsp;    // posicion es un entero
 <i class="no-highlight">63</i>&nbsp;    public Double retornarPuntoY(int posicion) {
-<b class="nc"><i class="no-highlight">64</i>&nbsp;        return poligono[posicion].getY();</b>
+<b class="fc"><i class="no-highlight">64</i>&nbsp;        return poligono[posicion].getY();</b>
 <i class="no-highlight">65</i>&nbsp;    }
 <i class="no-highlight">66</i>&nbsp;
 <i class="no-highlight">67</i>&nbsp;
@@ -147,16 +147,16 @@ Current scope:     <a href="../../index.html">all classes</a>
 <i class="no-highlight">72</i>&nbsp;    public Double areaPoligono(Poligono poligono, int n)
 <i class="no-highlight">73</i>&nbsp;    {
 <i class="no-highlight">74</i>&nbsp;        // inicializamos el  area
-<b class="nc"><i class="no-highlight">75</i>&nbsp;        Double area = 0D;</b>
-<b class="nc"><i class="no-highlight">76</i>&nbsp;        int j = n - 1;</b>
-<b class="nc"><i class="no-highlight">77</i>&nbsp;        for (int i = 0; i &lt; n; i++) {</b>
+<b class="fc"><i class="no-highlight">75</i>&nbsp;        Double area = 0D;</b>
+<b class="fc"><i class="no-highlight">76</i>&nbsp;        int j = n - 1;</b>
+<b class="fc"><i class="no-highlight">77</i>&nbsp;        for (int i = 0; i &lt; n; i++) {</b>
 <i class="no-highlight">78</i>&nbsp;            // area += (X[j] + X[i]) * (Y[j] - Y[i]);
-<b class="nc"><i class="no-highlight">79</i>&nbsp;            area += (poligono.retornarPuntoX(j)  + poligono.retornarPuntoX(i)) * (poligono.retornarPuntoY(j) - poligono.retornarPuntoY(i));</b>
+<b class="fc"><i class="no-highlight">79</i>&nbsp;            area += (poligono.retornarPuntoX(j)  + poligono.retornarPuntoX(i)) * (poligono.retornarPuntoY(j) - poligono.retornarPuntoY(i));</b>
 <i class="no-highlight">80</i>&nbsp;            // agregamos el ultimo vertice nuevamente
-<b class="nc"><i class="no-highlight">81</i>&nbsp;            j = i;</b>
+<b class="fc"><i class="no-highlight">81</i>&nbsp;            j = i;</b>
 <i class="no-highlight">82</i>&nbsp;        }
 <i class="no-highlight">83</i>&nbsp;        // Retornamos el valor absoluto del área
-<b class="nc"><i class="no-highlight">84</i>&nbsp;        return Math.abs(area / 2.0);</b>
+<b class="fc"><i class="no-highlight">84</i>&nbsp;        return Math.abs(area / 2.0);</b>
 <i class="no-highlight">85</i>&nbsp;    }
 <i class="no-highlight">86</i>&nbsp;
 <i class="no-highlight">87</i>&nbsp;    // Calculamos el area de una circunferencia PI * radio ^2
@@ -192,7 +192,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2022-07-19 14:16</div>
+    <div style="float:right;">generated on 2022-07-19 15:22</div>
 </div>
 </body>
 </html>

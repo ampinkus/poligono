@@ -9,10 +9,11 @@ public class PoligonoTest {
         // given: Donde ponemos los datos
         Double radio = 2D;
         Double area;
-        Poligono poligono = new Poligono(1);
+        Poligono circunferencia = new Poligono(1);
+
 
         //when: Donde ejecutamos el método a probar
-        area = poligono.areaPoligono(radio);
+        area = circunferencia.areaPoligono(radio);
 
         // then: Donde chequeamos el resultado
         // si el radio es 2 el área es PI * 4
@@ -24,13 +25,58 @@ public class PoligonoTest {
         // given: Donde ponemos los datos
         Double radio = 2D;
         Double area;
-        Poligono poligono = new Poligono(1);
+        Poligono circunferemncia = new Poligono(1);
 
         //when: Donde ejecutamos el método a probar
-        area = poligono.areaPoligono(radio);
+        area = circunferemncia.areaPoligono(radio);
 
         // then: Donde chequeamos el resultado
         // si el radio es 2 el área es PI * 4, en este caso debe no debe pasar el test
         assertEquals(Math.PI * 3, area,0.5);
     }
+
+    @Test
+    public void test_area_poigono_pasa() {
+        // Given
+        Poligono poligono = new Poligono(3);  // genero un triangulo
+        Punto[] punto = new Punto[3]; // genero los tres puntos para el trinagulo
+        Double area = 0D;
+        // genero los puntos del poligono
+        punto[0] = new Punto(0D, 0D);
+        punto[1] = new Punto(1D, 0D);
+        punto[2] = new Punto(0D, 1D);
+        // ingreso los puntos en el poligono
+        poligono.Insertar(0, punto[0]);
+        poligono.Insertar(1, punto[1]);
+        poligono.Insertar(2, punto[2]);
+
+        // when
+        area = poligono.areaPoligono(poligono, 3);
+
+        // then
+        assertEquals(0.5, area, 0.1); // El area es 0.5, el test es correcto
+    }
+
+    @Test
+    public void test_area_poigono_no_pasa(){
+        // Given
+        Poligono poligono = new Poligono(3);  // genero un triangulo
+        Punto[] punto = new Punto[3]; // genero los tres puntos para el trinagulo
+        Double area = 0D;
+        // genero los puntos del poligono
+        punto[0] = new Punto(0D,0D);
+        punto[1] = new Punto(1D,0D);
+        punto[2] = new Punto(0D,1D);
+        // ingreso los puntos en el poligono
+        poligono.Insertar(0,punto[0]);
+        poligono.Insertar(1,punto[1]);
+        poligono.Insertar(2,punto[2]);
+
+        // when
+        area = poligono.areaPoligono(poligono,3);
+
+        // then
+        assertEquals(1, area,0.1); // El area es 0.5 pero sugiero que es 1 , el test no pasa
+    }
+
 }
