@@ -65,9 +65,11 @@ public class Poligono extends Figura {
     }
 
 
-    // Calculamos el valor del area utilizando la formula de "lazo de zapato"
-    // Uso:  Los argumentos son el poligono del cual queremos calcular el área y el número de vertices
-    public double areaPoligono(Poligono poligono, int n)
+    // Calculamos el valor del area de un poligono utilizando la formula de "lazo de zapato"
+    // esta formula me permite calcular el area de cualquier polígono ingresando las coordenadas (X,Y) en sentido horario.
+    // Uso:  Los argumentos son el poligono del cual queremos calcular el área y el número de vertices del poligono.
+    @Override
+    public Double areaPoligono(Poligono poligono, int n)
     {
         // inicializamos el  area
         Double area = 0D;
@@ -82,5 +84,10 @@ public class Poligono extends Figura {
         return Math.abs(area / 2.0);
     }
 
+    // Calculamos el area de una circunferencia PI * radio ^2
+    @Override
+    public Double areaPoligono(Double radio){
+        return Math.PI * radio * radio;
+    }
 
 }

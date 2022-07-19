@@ -8,6 +8,7 @@ public class FiguraApp {
         Scanner entrada = new Scanner(System.in);  // creo el objeto entrada para escanear el teclado
         int elementos;  // numero de puntos del poligono
         Double X, Y; // coordenadas de los puntos
+        Double radio; // radio de la circunferencia
 
         System.out.print("\nIngrese la cantidad de puntos del poligono: ");
         elementos = entrada.nextInt(); // ingreso un entero: variable = entrada.nextInt()
@@ -25,15 +26,23 @@ public class FiguraApp {
             poligono.Insertar(i,puntos[i]);  // ingreso en el indice i del poligono el punto
         }
 
-        for (int i = 0; i < elementos; i++) {  // muestro las coordenadas dee los puntos del poligono
+         /*
+         // muestro las coordenadas de los puntos del poligono, util para testeo
+        for (int i = 0; i < elementos; i++) {
             System.out.print("Coordenada X  del punto " + (i + 1) + " del poligono: " );
             poligono.MostrarX(i);
             System.out.print("Coordenada Y  del punto " + (i + 1) + " del poligono: " );
             poligono.MostrarY(i);
             System.out.println();
         }
+         */
+
+        // ingreso el radio de una circunferencia
+        System.out.print("Ingrese el radio de la circunferencia: ");
+        radio = entrada.nextDouble();
 
         System.out.println("El area del poligono es: " + poligono.areaPoligono(poligono,elementos));
+        System.out.println("El area de la circunferencia es: " + poligono.areaPoligono(radio));
 
     }
 
